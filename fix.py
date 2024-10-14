@@ -9,6 +9,6 @@ for (root,_,files) in os.walk("."):
 		f.close()
 
 		f = open(os.path.join(root, fn), "w")
-		f.write(mcode.replace("$$", "\n$$\n"))
+		f.write(mcode.replace("$$", "\n\n$$\n\n").replace(":", ":\n"))
 		f.close()
 
